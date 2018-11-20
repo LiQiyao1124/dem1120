@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>Demography Map</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Map  -->
+  <div id="map"></div>
+    <!-- Info Window  -->
+  
+  <div class='map-overlay' id='features'>    <!-- id -->
+    <h2>Virginia Demography Map</h2>
+      <div id='info-window-body'>
+    	<p>Hover over each block to learn more infomation.</p>
+      </div>
+  </div>
+    
+  <div class='map-overlay legend' id='legend-education'></div>      <!-- legend frame  -->
+  <div class='map-overlay legend' id='legend-income'></div>      <!-- legend frame  -->
+  <div class='map-overlay legend' id='legend-white'></div>
+  <div class='map-overlay legend' id='legend-black'></div>
+  <div class='map-overlay legend' id='legend-asian'></div>
+  <div class='map-overlay legend' id='legend-hawaiian'></div>
+  <div class='map-overlay legend' id='legend-hispanic'></div>
+  <div class='map-overlay legend' id='legend-americanindian'></div>
+    
+  <!-- About this map button -->
+  <button id="about" class='button-default'>About this map</button>
+  
+  <!-- A modal, hidden by default in our css, which provides info about this project when shown -->
+  <div class='modal'>
+    
+    <h2 class='modal-title'>About this project</h2>
+    
+    <div class='modal-body'><p>Virginia Racialization Condition map contains information about racial distribution, income level and degree of education. It helps with analyzing social and economic condition of virginia. This map is an assignment created in the Scripting Civic Engagement seminar at the University of Virginia (Fall 2018), taught by Andrea Hansen Phillips. The map was made by Qiyao Li.</p><p>Map data courtesy of <a href='https://www.mapbox.com/studio/'>Mapbox Studio</a> and the <a href='https://www.census.gov/'>United States Census Bereau</a></p><p>For questions or to improve this map, contact <a href='ql3hv@virginia.edu'>Qiyao Li</a></p></div>
+    
+    <button class='close-button'>&times;</button>  <!-- A special "x" character (the multiply sign) used in close buttons -->  
+  </div>
+  <div id="screen"></div> <!-- Black overlay behind the modal -->
+
+  <div id='layers-control'></div>
+  <pre id='coordinates' class='coordinates'></pre>
+
+</body>
+</body>
+    <script src="map.js"></script>
+</html>
